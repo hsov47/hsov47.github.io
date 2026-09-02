@@ -3765,6 +3765,10 @@ input, select, textarea {
         font-size: 15px !important;
         line-height: 36px !important;
     }
+
+	.art-gallery {
+    border: 10px solid red !important;
+}
 }
 
 
