@@ -64,4 +64,25 @@
 					visibleClass: 'navPanel-visible'
 				});
 
+	// Gallery
+	const gallery = document.querySelector('.art-gallery');
+	const leftArrow = document.querySelector('.art-arrow-left');
+	const rightArrow = document.querySelector('.art-arrow-right');
+
+	const scrollAmount = 320;
+
+	rightArrow.addEventListener('click', () => {
+		gallery.scrollBy({
+			left: scrollAmount,
+			behavior: 'smooth'
+		});
+	});
+
+	leftArrow.addEventListener('click', () => {
+		gallery.scrollBy({
+			left: -scrollAmount,
+			behavior: 'smooth'
+		});
+	});
+
 })(jQuery);

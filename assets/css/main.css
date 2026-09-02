@@ -3470,9 +3470,6 @@ input, select, textarea {
 }
 
 
-
-
-
 /* ---------------------------------------------------------
    FOOTER ICONS
    --------------------------------------------------------- */
@@ -3591,3 +3588,159 @@ input, select, textarea {
         padding: 1.5em;
     }
 }
+
+
+/* =========================================================
+   ART GALLERY ARROWS
+   ========================================================= */
+
+.art-gallery-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 0 3em;
+    box-sizing: border-box;
+}
+
+
+/* Gallery */
+.art-gallery {
+    display: flex;
+    gap: 1.5em;
+
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 0.5em 0 1.5em;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+}
+
+.art-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================================
+   ART CARDS
+   ========================================================= */
+
+.art-card {
+    flex: 0 0 280px;
+
+    width: 280px;
+    height: 280px;
+
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    background: #eee;
+}
+
+.art-card img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   ARROWS
+   ========================================================= */
+
+/* Override Arcana's button styles */
+.art-gallery-wrapper .art-arrow {
+    position: absolute;
+    z-index: 20;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    min-width: 42px !important;
+    max-width: 42px !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: #555 !important;
+    color: #fff !important;
+
+    font-family: Arial, sans-serif;
+    font-size: 18px !important;
+    line-height: 42px !important;
+    text-align: center;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition: background 0.2s ease;
+}
+
+.art-gallery-wrapper .art-arrow:hover {
+    background: #333 !important;
+}
+
+.art-arrow-left {
+    left: 0;
+}
+
+.art-arrow-right {
+    right: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 736px) {
+
+    .art-gallery-wrapper {
+        padding: 0 2.5em;
+    }
+
+    .art-gallery {
+        gap: 1em;
+    }
+
+    .art-card {
+        flex: 0 0 240px;
+
+        width: 240px;
+        height: 240px;
+    }
+
+    .art-gallery-wrapper .art-arrow {
+        width: 36px !important;
+        height: 36px !important;
+
+        min-width: 36px !important;
+        max-width: 36px !important;
+
+        font-size: 15px !important;
+        line-height: 36px !important;
+    }
+}
+
